@@ -1,6 +1,28 @@
 # create-jar-with-maven
 
-Run `mvn package`
+### pom.xml
+
+    <build>
+        <finalName>ozgurutku</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>
+                                ozgur.Run
+                            </mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+### Run 
+`mvn package`
 and
 `java -jar target/ozgurutku.jar`
 
